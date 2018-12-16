@@ -10,6 +10,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 2018_12_16_140148) do
+
+  create_table "game_squares", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.integer "game_id"
+    t.string "squares"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "games", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.boolean "x_is_next"
+    t.boolean "x_is_win"
+    t.integer "game_status"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end
