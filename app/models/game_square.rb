@@ -1,0 +1,2 @@
+class GameSquare < ApplicationRecord
+end
